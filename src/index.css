@@ -1,0 +1,153 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reset base styles */
+body, html, #root {
+  padding: 0;
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: #fff;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+/* HEADER STYLES */
+.header {
+  width: 100%;
+  padding: 0 24px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 0 2px rgba(0,0,0,0.05);
+  z-index: 100;
+  position: sticky;
+  top: 0;
+}
+
+.header__logo {
+  font-size: 2.1rem;
+  font-weight: bold;
+  color: #f1641e; /* Etsy orange */
+  letter-spacing: -2px;
+  margin-right: 40px;
+}
+
+.header__search {
+  flex: 1;
+  min-width: 220px;
+  max-width: 540px;
+  margin-right: 40px;
+}
+
+.header__nav {
+  display: flex;
+  gap: 24px;
+  font-size: 1.1rem;
+  color: #3c3c3c;
+  font-weight: 500;
+}
+
+.header__icons {
+  display: flex;
+  gap: 18px;
+}
+
+.header__icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .header {
+    height: 68px;
+    padding: 0 12px;
+  }
+  .header__logo {
+    font-size: 1.5rem;
+    margin-right: 16px;
+  }
+  .header__nav {
+    gap: 12px;
+    font-size: 0.98rem;
+  }
+}
+@media (max-width: 600px) {
+  .header__nav {
+    display: none;
+  }
+  .header {
+    height: 56px;
+  }
+  .header__logo {
+    margin-right: 8px;
+  }
+  .header__search {
+    min-width: 120px;
+    max-width: none;
+    margin-right: 8px;
+  }
+}
+
+.footer {
+  background: #fbeee6;
+  padding: 36px 10vw 18px;
+  margin-top: auto;
+  color: #333;
+  font-size: 1rem;
+  border-top: 1px solid #ececec;
+}
+
+.footer__content {
+  max-width: 1550px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Custom scrollbar for nav */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Etsy brand color */
+.text-etsy-red {
+  color: #f1641e;
+}
+
+.hover\:text-etsy-red:hover {
+  color: #f1641e;
+}
+
+.focus\:ring-etsy-red:focus {
+  --tw-ring-color: #f1641e;
+}
